@@ -1,0 +1,299 @@
+{
+  "categories": [
+    { "slug": "bayan-pijama",    "name": "Bayan Pijama",    "count": 10 },
+    { "slug": "erkek-pijama",    "name": "Erkek Pijama",    "count": 6  },
+    { "slug": "cocuk",           "name": "Çocuk",           "count": 6  },
+    { "slug": "pijama-takimi",   "name": "Pijama Takımı",   "count": 8  },
+    { "slug": "hamile-lohusa",   "name": "Hamile Lohusa",   "count": 5  },
+    { "slug": "buyuk-beden",     "name": "Büyük Beden",     "count": 6  }
+  ],
+  "productsBySlug": {
+    "etvous-kalp-love-desenli-siyah-pijama-ustu-7701": {
+      "slug": "etvous-kalp-love-desenli-siyah-pijama-ustu-7701",
+      "title": "Et Vous Kalp & Love Desenli Siyah Pijama Üstü 7701",
+      "image": "/images/products/foot.png",
+      "category": "bayan-pijama",
+      "categoryName": "Bayan Pijama"
+    },
+    "etvous-kalp-desenli-siyah-pijama-takimi-7702": {
+      "slug": "etvous-kalp-desenli-siyah-pijama-takimi-7702",
+      "title": "Et Vous Kalp Desenli Siyah Pijama Takımı 7702",
+      "image": "/images/products/foot.png",
+      "category": "bayan-pijama",
+      "categoryName": "Bayan Pijama"
+    },
+    "etvous-love-baskili-uzun-kollu-pijama-7703": {
+      "slug": "etvous-love-baskili-uzun-kollu-pijama-7703",
+      "title": "Et Vous Love Baskılı Uzun Kollu Pijama 7703",
+      "image": "/images/products/foot.png",
+      "category": "bayan-pijama",
+      "categoryName": "Bayan Pijama"
+    },
+    "etvous-batik-desen-genis-kesim-pijama-alti-7704": {
+      "slug": "etvous-batik-desen-genis-kesim-pijama-alti-7704",
+      "title": "Et Vous Batik Desen Geniş Kesim Pijama Altı 7704",
+      "image": "/images/products/foot3.png",
+      "category": "bayan-pijama",
+      "categoryName": "Bayan Pijama"
+    },
+    "etvous-batik-renkli-bol-kesim-pijama-alti-7705": {
+      "slug": "etvous-batik-renkli-bol-kesim-pijama-alti-7705",
+      "title": "Et Vous Batik Renkli Bol Kesim Pijama Altı 7705",
+      "image": "/images/products/foot3.png",
+      "category": "bayan-pijama",
+      "categoryName": "Bayan Pijama"
+    },
+    "etvous-kiraz-desenli-beyaz-pijama-takimi-7706": {
+      "slug": "etvous-kiraz-desenli-beyaz-pijama-takimi-7706",
+      "title": "Et Vous Kiraz Desenli Beyaz Pijama Takımı 7706",
+      "image": "/images/products/foot4.png",
+      "category": "bayan-pijama",
+      "categoryName": "Bayan Pijama"
+    },
+    "etvous-kiraz-desenli-uzun-kollu-pijama-ustu-7707": {
+      "slug": "etvous-kiraz-desenli-uzun-kollu-pijama-ustu-7707",
+      "title": "Et Vous Kiraz Desenli Uzun Kollu Pijama Üstü 7707",
+      "image": "/images/products/foot4.png",
+      "category": "bayan-pijama",
+      "categoryName": "Bayan Pijama"
+    },
+    "etvous-kiraz-desenli-ikili-pijama-takim-7708": {
+      "slug": "etvous-kiraz-desenli-ikili-pijama-takim-7708",
+      "title": "Et Vous Kiraz Desenli İkili Pijama Takım 7708",
+      "image": "/images/products/foot4.png",
+      "category": "bayan-pijama",
+      "categoryName": "Bayan Pijama"
+    },
+    "etvous-mavi-cicekli-v-yaka-pijama-ustu-7709": {
+      "slug": "etvous-mavi-cicekli-v-yaka-pijama-ustu-7709",
+      "title": "Et Vous Mavi Çiçekli V Yaka Pijama Üstü 7709",
+      "image": "/images/products/foot5.png",
+      "category": "bayan-pijama",
+      "categoryName": "Bayan Pijama"
+    },
+    "etvous-mavi-cicekli-kisa-kollu-pijama-ustu-7710": {
+      "slug": "etvous-mavi-cicekli-kisa-kollu-pijama-ustu-7710",
+      "title": "Et Vous Mavi Çiçekli Kısa Kollu Pijama Üstü 7710",
+      "image": "/images/products/foot5.png",
+      "category": "bayan-pijama",
+      "categoryName": "Bayan Pijama"
+    },
+    "etvous-lacivert-kareli-dugmeli-erkek-hirka-7711": {
+      "slug": "etvous-lacivert-kareli-dugmeli-erkek-hirka-7711",
+      "title": "Et Vous Lacivert Kareli Düğmeli Erkek Pijama Hırkası 7711",
+      "image": "/images/products/foot6.png",
+      "category": "erkek-pijama",
+      "categoryName": "Erkek Pijama"
+    },
+    "etvous-lacivert-kareli-erkek-pijama-takimi-7712": {
+      "slug": "etvous-lacivert-kareli-erkek-pijama-takimi-7712",
+      "title": "Et Vous Lacivert Kareli Erkek Pijama Takımı 7712",
+      "image": "/images/products/foot6.png",
+      "category": "erkek-pijama",
+      "categoryName": "Erkek Pijama"
+    },
+    "etvous-kareli-erkek-uzun-kollu-pijama-ustu-7713": {
+      "slug": "etvous-kareli-erkek-uzun-kollu-pijama-ustu-7713",
+      "title": "Et Vous Kareli Erkek Uzun Kollu Pijama Üstü 7713",
+      "image": "/images/products/foot6.png",
+      "category": "erkek-pijama",
+      "categoryName": "Erkek Pijama"
+    },
+    "etvous-lacivert-ekose-erkek-pijama-hirkasi-7714": {
+      "slug": "etvous-lacivert-ekose-erkek-pijama-hirkasi-7714",
+      "title": "Et Vous Lacivert Ekose Erkek Pijama Hırkası 7714",
+      "image": "/images/products/foot6.png",
+      "category": "erkek-pijama",
+      "categoryName": "Erkek Pijama"
+    },
+    "etvous-erkek-kareli-ev-giyimi-hirka-7715": {
+      "slug": "etvous-erkek-kareli-ev-giyimi-hirka-7715",
+      "title": "Et Vous Erkek Kareli Ev Giyimi Hırka 7715",
+      "image": "/images/products/foot6.png",
+      "category": "erkek-pijama",
+      "categoryName": "Erkek Pijama"
+    },
+    "etvous-lacivert-kareli-erkek-dugmeli-pijama-7716": {
+      "slug": "etvous-lacivert-kareli-erkek-dugmeli-pijama-7716",
+      "title": "Et Vous Lacivert Kareli Erkek Düğmeli Pijama 7716",
+      "image": "/images/products/foot6.png",
+      "category": "erkek-pijama",
+      "categoryName": "Erkek Pijama"
+    },
+    "etvous-kiraz-desenli-cocuk-pijama-takimi-7717": {
+      "slug": "etvous-kiraz-desenli-cocuk-pijama-takimi-7717",
+      "title": "Et Vous Kiraz Desenli Çocuk Pijama Takımı 7717",
+      "image": "/images/products/foot4.png",
+      "category": "cocuk",
+      "categoryName": "Çocuk"
+    },
+    "etvous-kiraz-desenli-cocuk-pijama-ustu-7718": {
+      "slug": "etvous-kiraz-desenli-cocuk-pijama-ustu-7718",
+      "title": "Et Vous Kiraz Desenli Çocuk Pijama Üstü 7718",
+      "image": "/images/products/foot4.png",
+      "category": "cocuk",
+      "categoryName": "Çocuk"
+    },
+    "etvous-love-baskili-cocuk-pijama-ustu-7719": {
+      "slug": "etvous-love-baskili-cocuk-pijama-ustu-7719",
+      "title": "Et Vous Love Baskılı Çocuk Pijama Üstü 7719",
+      "image": "/images/products/foot.png",
+      "category": "cocuk",
+      "categoryName": "Çocuk"
+    },
+    "etvous-kalp-desenli-cocuk-pijama-takimi-7720": {
+      "slug": "etvous-kalp-desenli-cocuk-pijama-takimi-7720",
+      "title": "Et Vous Kalp Desenli Çocuk Pijama Takımı 7720",
+      "image": "/images/products/foot.png",
+      "category": "cocuk",
+      "categoryName": "Çocuk"
+    },
+    "etvous-kiraz-desenli-cocuk-uzun-kollu-7721": {
+      "slug": "etvous-kiraz-desenli-cocuk-uzun-kollu-7721",
+      "title": "Et Vous Kiraz Desenli Çocuk Uzun Kollu Pijama 7721",
+      "image": "/images/products/foot4.png",
+      "category": "cocuk",
+      "categoryName": "Çocuk"
+    },
+    "etvous-love-kalp-baskili-cocuk-pijama-7722": {
+      "slug": "etvous-love-kalp-baskili-cocuk-pijama-7722",
+      "title": "Et Vous Love Kalp Baskılı Çocuk Pijama 7722",
+      "image": "/images/products/foot.png",
+      "category": "cocuk",
+      "categoryName": "Çocuk"
+    },
+    "etvous-kalp-desenli-kirmizi-askili-atlet-7723": {
+      "slug": "etvous-kalp-desenli-kirmizi-askili-atlet-7723",
+      "title": "Et Vous Kalp Desenli Kırmızı Askılı Pijama Üstü 7723",
+      "image": "/images/products/foot2.png",
+      "category": "pijama-takimi",
+      "categoryName": "Pijama Takımı"
+    },
+    "etvous-kalp-baskili-dantel-kirmizi-atlet-7724": {
+      "slug": "etvous-kalp-baskili-dantel-kirmizi-atlet-7724",
+      "title": "Et Vous Kalp Baskılı Dantel Detaylı Kırmızı Pijama Üstü 7724",
+      "image": "/images/products/foot2.png",
+      "category": "pijama-takimi",
+      "categoryName": "Pijama Takımı"
+    },
+    "etvous-love-baskili-siyah-pijama-takimi-ustu-7725": {
+      "slug": "etvous-love-baskili-siyah-pijama-takimi-ustu-7725",
+      "title": "Et Vous Love Baskılı Siyah Pijama Takımı Üstü 7725",
+      "image": "/images/products/foot.png",
+      "category": "pijama-takimi",
+      "categoryName": "Pijama Takımı"
+    },
+    "etvous-kalp-desenli-kirmizi-pijama-takimi-7726": {
+      "slug": "etvous-kalp-desenli-kirmizi-pijama-takimi-7726",
+      "title": "Et Vous Kalp Desenli Kırmızı Pijama Takımı 7726",
+      "image": "/images/products/foot2.png",
+      "category": "pijama-takimi",
+      "categoryName": "Pijama Takımı"
+    },
+    "etvous-kirmizi-askili-kalp-baskili-atlet-7727": {
+      "slug": "etvous-kirmizi-askili-kalp-baskili-atlet-7727",
+      "title": "Et Vous Kırmızı Askılı Kalp Baskılı Pijama Üstü 7727",
+      "image": "/images/products/foot2.png",
+      "category": "pijama-takimi",
+      "categoryName": "Pijama Takımı"
+    },
+    "etvous-siyah-love-kisa-kollu-pijama-7728": {
+      "slug": "etvous-siyah-love-kisa-kollu-pijama-7728",
+      "title": "Et Vous Siyah Love Kısa Kollu Pijama 7728",
+      "image": "/images/products/foot.png",
+      "category": "pijama-takimi",
+      "categoryName": "Pijama Takımı"
+    },
+    "etvous-kirmizi-dantel-kalp-askili-pijama-7729": {
+      "slug": "etvous-kirmizi-dantel-kalp-askili-pijama-7729",
+      "title": "Et Vous Kırmızı Dantel Kalp Askılı Pijama 7729",
+      "image": "/images/products/foot2.png",
+      "category": "pijama-takimi",
+      "categoryName": "Pijama Takımı"
+    },
+    "etvous-love-siyah-kisa-kol-pijama-ustu-7730": {
+      "slug": "etvous-love-siyah-kisa-kol-pijama-ustu-7730",
+      "title": "Et Vous Love Siyah Kısa Kol Pijama Üstü 7730",
+      "image": "/images/products/foot.png",
+      "category": "pijama-takimi",
+      "categoryName": "Pijama Takımı"
+    },
+    "etvous-kiraz-desenli-hamile-pijama-takimi-7731": {
+      "slug": "etvous-kiraz-desenli-hamile-pijama-takimi-7731",
+      "title": "Et Vous Kiraz Desenli Hamile Pijama Takımı 7731",
+      "image": "/images/products/foot4.png",
+      "category": "hamile-lohusa",
+      "categoryName": "Hamile Lohusa"
+    },
+    "etvous-kiraz-desenli-emzirme-pijamasi-7732": {
+      "slug": "etvous-kiraz-desenli-emzirme-pijamasi-7732",
+      "title": "Et Vous Kiraz Desenli Emzirme Pijaması 7732",
+      "image": "/images/products/foot4.png",
+      "category": "hamile-lohusa",
+      "categoryName": "Hamile Lohusa"
+    },
+    "etvous-mavi-cicekli-hamile-pijama-ustu-7733": {
+      "slug": "etvous-mavi-cicekli-hamile-pijama-ustu-7733",
+      "title": "Et Vous Mavi Çiçekli Hamile Pijama Üstü 7733",
+      "image": "/images/products/foot5.png",
+      "category": "hamile-lohusa",
+      "categoryName": "Hamile Lohusa"
+    },
+    "etvous-kalp-desenli-hamile-pijama-ustu-7734": {
+      "slug": "etvous-kalp-desenli-hamile-pijama-ustu-7734",
+      "title": "Et Vous Kalp Desenli Hamile Pijama Üstü 7734",
+      "image": "/images/products/foot.png",
+      "category": "hamile-lohusa",
+      "categoryName": "Hamile Lohusa"
+    },
+    "etvous-kiraz-desenli-lohusa-pijama-takimi-7735": {
+      "slug": "etvous-kiraz-desenli-lohusa-pijama-takimi-7735",
+      "title": "Et Vous Kiraz Desenli Lohusa Pijama Takımı 7735",
+      "image": "/images/products/foot4.png",
+      "category": "hamile-lohusa",
+      "categoryName": "Hamile Lohusa"
+    },
+    "etvous-mavi-cicekli-v-yaka-buyuk-beden-7736": {
+      "slug": "etvous-mavi-cicekli-v-yaka-buyuk-beden-7736",
+      "title": "Et Vous Mavi Çiçekli V Yaka Büyük Beden Pijama Üstü 7736",
+      "image": "/images/products/foot5.png",
+      "category": "buyuk-beden",
+      "categoryName": "Büyük Beden"
+    },
+    "etvous-lacivert-kareli-buyuk-beden-hirka-7737": {
+      "slug": "etvous-lacivert-kareli-buyuk-beden-hirka-7737",
+      "title": "Et Vous Lacivert Kareli Büyük Beden Pijama Hırkası 7737",
+      "image": "/images/products/foot6.png",
+      "category": "buyuk-beden",
+      "categoryName": "Büyük Beden"
+    },
+    "etvous-batik-desen-buyuk-beden-pijama-alti-7738": {
+      "slug": "etvous-batik-desen-buyuk-beden-pijama-alti-7738",
+      "title": "Et Vous Batik Desen Büyük Beden Pijama Altı 7738",
+      "image": "/images/products/foot3.png",
+      "category": "buyuk-beden",
+      "categoryName": "Büyük Beden"
+    },
+    "etvous-mavi-cicekli-buyuk-beden-pijama-takimi-7739": {
+      "slug": "etvous-mavi-cicekli-buyuk-beden-pijama-takimi-7739",
+      "title": "Et Vous Mavi Çiçekli Büyük Beden Pijama Takımı 7739",
+      "image": "/images/products/foot5.png",
+      "category": "buyuk-beden",
+      "categoryName": "Büyük Beden"
+    },
+    "etvous-kiraz-desenli-buyuk-beden-pijama-7740": {
+      "slug": "etvous-kiraz-desenli-buyuk-beden-pijama-7740",
+      "title": "Et Vous Kiraz Desenli Büyük Beden Pijama 7740",
+      "image": "/images/products/foot4.png",
+      "category": "buyuk-beden",
+      "categoryName": "Büyük Beden"
+    },
+    "etvous-kareli-buyuk-beden-pijama-hirkasi-7741": {
+      "slug": "etvous-kareli-buyuk-beden-pijama-hirkasi-7741",
+      "title": "Et Vous Kareli Büyük Beden Pijama Hırkası 7741",
+      "image": "/images/products/foot6.png",
+      "category": "buyuk-beden",
+      "categoryName": "Büyük Beden"
+    }
+  }
+}
