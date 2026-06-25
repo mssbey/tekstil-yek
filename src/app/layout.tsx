@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { WhatsAppFloat } from "@/components/WhatsAppFloat";
-import { SplashIntro } from "@/components/SplashIntro";
-import { SITE } from "@/lib/config";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -22,8 +17,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: `${SITE.brand} – ${SITE.tagline}`,
-  description: SITE.description,
+  title: "Fikret Tekstil",
+  description: "Fikret Tekstil — 1976'dan beri Bursa'dan dünyaya kaliteli pijama takımı üretimi.",
 };
 
 export default function RootLayout({
@@ -37,11 +32,7 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <SplashIntro />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <WhatsAppFloat />
+        {children}
       </body>
     </html>
   );

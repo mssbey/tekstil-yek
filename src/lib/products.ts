@@ -7,13 +7,17 @@ export type Product = {
   image: string;
   category: string;
   categoryName: string;
+  // Optional enriched fields (editable via admin)
+  description?: string;
+  sizes?: string[];
+  tags?: string[];
+  features?: string[];
+  care?: string[];
+  shipping?: string;
 };
 
 const raw = data as {
-  productsBySlug: Record<
-    string,
-    { slug: string; title: string; image: string; category: string; categoryName: string }
-  >;
+  productsBySlug: Record<string, Product>;
 };
 
 export const allProducts: Product[] = Object.values(raw.productsBySlug);

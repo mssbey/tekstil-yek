@@ -20,6 +20,37 @@ function toModelCode(slug: string): string {
   return `FT-${String((h % 900) + 100).padStart(3, "0")}`;
 }
 
+const TAG_ICONS: Record<string, React.ElementType> = {
+  "Pamuk & Modal": Leaf,
+  "Yerli Üretim": Factory,
+  "Premium İşçilik": Sparkles,
+  "50+ Yıl Tecrübe": Award,
+};
+const DEFAULT_ICON = Sparkles;
+
+const DEFAULT_DESCRIPTION =
+  "%100 doğal kumaştan üretilmiş, rahat kalıbı ile günlük ev kullanımı için ideal. Yıkamada renk vermez; dokusunu, kalıbını ve formunu uzun süre korur. Türkiye'de üretilmiştir.";
+
+const DEFAULT_TAGS = ["Pamuk & Modal", "Yerli Üretim", "Premium İşçilik", "50+ Yıl Tecrübe"];
+
+const DEFAULT_FEATURES = [
+  "%70 Pamuk, %30 Modal karışımı",
+  "Nefes alabilen, terletmeyen kumaş",
+  "Dayanıklı dikiş ve sağlam aksesuar",
+  "Antialerjik, hassas ciltlere uygun",
+  "OEKO-TEX standartlarında üretim",
+];
+
+const DEFAULT_CARE = [
+  "30°C'de makinede yıkanabilir",
+  "Tersten yıkayın, çamaşır suyu kullanmayın",
+  "Düşük ısıda ütüleyin",
+  "Kuru temizlemeye uygun değildir",
+];
+
+const DEFAULT_SHIPPING =
+  "Sipariş ve fiyat bilgisi WhatsApp üzerinden alınır. Onaylanan siparişler Türkiye geneline 1–3 iş günü içinde kargoya verilir. Toptan alımlar için özel fiyat ve numune talep edebilirsiniz.";
+
 export default async function ProductPage({
   params,
 }: {
@@ -34,6 +65,12 @@ export default async function ProductPage({
     .slice(0, 4);
 
   const modelCode = toModelCode(slug);
+
+  const description = product.description || DEFAULT_DESCRIPTION;
+  const tags = product.tags?.length ? product.tags : DEFAULT_TAGS;
+  const features = product.features?.length ? product.features : DEFAULT_FEATURES;
+  const care = product.care?.length ? product.care : DEFAULT_CARE;
+  const shipping = product.shipping || DEFAULT_SHIPPING;
 
   return (
     <>
@@ -86,26 +123,22 @@ export default async function ProductPage({
               </div>
 
               <p className="text-foreground/65 leading-relaxed mb-7 text-[15px]">
-                %100 doğal kumaştan üretilmiş, rahat kalıbı ile günlük ev kullanımı için
-                ideal. Yıkamada renk vermez; dokusunu, kalıbını ve formunu uzun süre korur.
-                <span className="font-medium text-foreground/80"> Türkiye&apos;de üretilmiştir.</span>
+                {description}
               </p>
 
               {/* Feature tags */}
               <div className="flex flex-wrap gap-2 mb-8">
-                {[
-                  { i: Leaf,     t: "Pamuk & Modal" },
-                  { i: Factory,  t: "Yerli Üretim" },
-                  { i: Sparkles, t: "Premium İşçilik" },
-                  { i: Award,    t: "50+ Yıl Tecrübe" },
-                ].map(({ i: I, t }) => (
-                  <span
-                    key={t}
-                    className="inline-flex items-center gap-1.5 text-[11px] font-medium px-3 py-2 bg-surface-2 text-foreground/70 border border-border hover:border-primary/25 transition-colors rounded-md"
-                  >
-                    <I className="w-3.5 h-3.5 text-primary-2" /> {t}
-                  </span>
-                ))}
+                {tags.map((t) => {
+                  const Icon = TAG_ICONS[t] ?? DEFAULT_ICON;
+                  return (
+                    <span
+                      key={t}
+                      className="inline-flex items-center gap-1.5 text-[11px] font-medium px-3 py-2 bg-surface-2 text-foreground/70 border border-border hover:border-primary/25 transition-colors rounded-md"
+                    >
+                      <Icon className="w-3.5 h-3.5 text-primary-2" /> {t}
+                    </span>
+                  );
+                })}
               </div>
 
               {/* WhatsApp order widget */}
@@ -117,24 +150,13 @@ export default async function ProductPage({
                   items={[
                     {
                       title: "Ürün Açıklaması",
-                      content: (
-                        <p>
-                          Yumuşak dokulu pamuk-modal karışımı kumaş, ferah kesim ve kaliteli
-                          dikiş detaylarıyla hazırlanmıştır. Geceleri rahat bir uyku, gündüzleri
-                          özgür bir konfor sunar. Kalıbı standart bedendir; iki beden arasında
-                          kaldıysanız bir üst bedeni tercih edebilirsiniz.
-                        </p>
-                      ),
+                      content: <p>{description}</p>,
                     },
                     {
                       title: "Özellikler & Kumaş",
                       content: (
                         <ul className="space-y-2 list-disc pl-5">
-                          <li>%70 Pamuk, %30 Modal karışımı</li>
-                          <li>Nefes alabilen, terletmeyen kumaş</li>
-                          <li>Dayanıklı dikiş ve sağlam aksesuar</li>
-                          <li>Antialerjik, hassas ciltlere uygun</li>
-                          <li>OEKO-TEX standartlarında üretim</li>
+                          {features.map((f, i) => <li key={i}>{f}</li>)}
                         </ul>
                       ),
                     },
@@ -142,22 +164,13 @@ export default async function ProductPage({
                       title: "Bakım Talimatları",
                       content: (
                         <ul className="space-y-2 list-disc pl-5">
-                          <li>30°C&apos;de makinede yıkanabilir</li>
-                          <li>Tersten yıkayın, çamaşır suyu kullanmayın</li>
-                          <li>Düşük ısıda ütüleyin</li>
-                          <li>Kuru temizlemeye uygun değildir</li>
+                          {care.map((c, i) => <li key={i}>{c}</li>)}
                         </ul>
                       ),
                     },
                     {
                       title: "Sipariş & Teslimat",
-                      content: (
-                        <p>
-                          Sipariş ve fiyat bilgisi WhatsApp üzerinden alınır. Onaylanan
-                          siparişler Türkiye geneline 1–3 iş günü içinde kargoya verilir.
-                          Toptan alımlar için özel fiyat ve numune talep edebilirsiniz.
-                        </p>
-                      ),
+                      content: <p>{shipping}</p>,
                     },
                   ]}
                 />

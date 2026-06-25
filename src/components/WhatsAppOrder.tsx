@@ -5,10 +5,11 @@ import { MessageCircle, Minus, Plus, ShieldCheck, Truck, Sparkles } from "lucide
 import type { Product } from "@/lib/products";
 import { buildProductWhatsAppUrl } from "@/lib/whatsapp";
 
-const SIZES = ["S", "M", "L", "XL", "2XL"];
+const DEFAULT_SIZES = ["S", "M", "L", "XL", "2XL"];
 
 export function WhatsAppOrder({ product }: { product: Product }) {
-  const [size, setSize] = useState("M");
+  const sizes = product.sizes?.length ? product.sizes : DEFAULT_SIZES;
+  const [size, setSize] = useState(sizes[1] ?? sizes[0]);
   const [qty,  setQty]  = useState(1);
 
   const href = buildProductWhatsAppUrl(product, { size, qty });
@@ -36,7 +37,7 @@ export function WhatsAppOrder({ product }: { product: Product }) {
           </button>
         </div>
         <div className="flex flex-wrap gap-2">
-          {SIZES.map((s) => (
+          {sizes.map((s) => (
             <button
               key={s}
               type="button"
