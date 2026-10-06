@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Mail, MapPin, MessageCircle, Phone, Clock, Send, Check } from "lucide-react";
 import { SITE } from "@/lib/config";
 import { buildSimpleWhatsAppUrl } from "@/lib/whatsapp";
+import { WhatsAppChannel } from "@/components/WhatsAppChannel";
 
 export default function ContactPage() {
   const [name,    setName]    = useState("");
@@ -55,9 +56,14 @@ export default function ContactPage() {
           <p className="text-muted-foreground mt-3 text-base">
             Sorularınız, siparişleriniz veya toptan satış için en hızlı yol WhatsApp.
           </p>
-          <a href={wa} target="_blank" rel="noopener" className="btn btn-whatsapp h-12 px-7 mt-6 inline-flex">
-            <MessageCircle className="w-5 h-5" /> WhatsApp ile Yazın
-          </a>
+          <div className="flex flex-wrap gap-3 mt-6">
+            <a href={wa} target="_blank" rel="noopener" className="btn btn-whatsapp h-12 px-7">
+              <MessageCircle className="w-5 h-5" /> WhatsApp ile Yazın
+            </a>
+            <a href={SITE.phoneHref} className="btn btn-glass h-12 px-7">
+              <Phone className="w-5 h-5" /> {SITE.phone}
+            </a>
+          </div>
         </div>
       </section>
 
@@ -66,7 +72,7 @@ export default function ContactPage() {
         <div className="container-x">
           <div className="grid md:grid-cols-3 gap-4">
             {[
-              { i: Phone,  t: "Telefon", v: SITE.phone,   href: `tel:${SITE.phone}` },
+              { i: Phone,  t: "Telefon", v: SITE.phone,   href: SITE.phoneHref },
               { i: Mail,   t: "E-posta", v: SITE.email,   href: `mailto:${SITE.email}` },
               { i: MapPin, t: "Adres",   v: SITE.address, href: undefined },
             ].map(({ i: I, t, v, href }) => {
@@ -157,6 +163,11 @@ export default function ContactPage() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
+          </div>
+
+          {/* WHATSAPP CHANNEL */}
+          <div className="mt-8">
+            <WhatsAppChannel />
           </div>
         </div>
       </section>

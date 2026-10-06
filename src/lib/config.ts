@@ -5,10 +5,14 @@ export const SITE = {
   description:
     "Fikret Tekstil — 1976'dan beri Bursa'dan dünyaya kaliteli pijama takımı üretimi. Toptan ve perakende.",
   email: "info@fikrettekstil.com",
-  phone: "+90 555 555 55 55",
+  phone: "0532 178 35 61",
+  // tel: link format (international, no spaces).
+  phoneHref: "tel:+905321783561",
   address: "Bursa, Türkiye",
   // WhatsApp number for cart checkout (international format, digits only).
-  whatsappNumber: "905555555555",
+  whatsappNumber: "905321783561",
+  // Official WhatsApp channel (announcements, new collections, campaigns).
+  whatsappChannel: "https://whatsapp.com/channel/0029Vb78SO54yltQcX3J541G",
   social: {
     instagram: "https://instagram.com/",
     facebook: "https://facebook.com/",

@@ -5,10 +5,11 @@ import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
-  Menu, Search, X, ChevronRight, ChevronDown, MessageCircle,
+  Menu, Search, X, ChevronRight, ChevronDown, MessageCircle, Phone,
 } from "lucide-react";
 import { CATEGORIES, SITE } from "@/lib/config";
 import { allProducts } from "@/lib/products";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 export function Header() {
   const [open, setOpen]           = useState(false);
@@ -57,6 +58,8 @@ export function Header() {
                   <span className="opacity-40">·</span>
                   <span>Sipariş &amp; bilgi için WhatsApp</span>
                   <span className="opacity-40">·</span>
+                  <span>Telefon: {SITE.phone}</span>
+                  <span className="opacity-40">·</span>
                   <span>50+ yıllık tekstil deneyimi</span>
                   <span className="opacity-40">·</span>
                   <span>Bursa&apos;dan dünyaya</span>
@@ -65,12 +68,20 @@ export function Header() {
               ))}
             </div>
           </div>
-          <a
-            href={`mailto:${SITE.email}`}
-            className="hidden md:inline ml-6 shrink-0 hover:text-primary-2 transition-colors"
-          >
-            {SITE.email}
-          </a>
+          <div className="hidden md:flex items-center gap-5 ml-6 shrink-0">
+            <a href={SITE.phoneHref} className="inline-flex items-center gap-1.5 hover:text-primary-2 transition-colors">
+              <Phone className="w-3 h-3" /> {SITE.phone}
+            </a>
+            <span className="opacity-30">|</span>
+            <a
+              href={SITE.whatsappChannel}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-1.5 text-whatsapp/80 hover:text-whatsapp transition-colors"
+            >
+              <WhatsAppIcon className="w-3 h-3" /> WhatsApp Kanalımız
+            </a>
+          </div>
         </div>
       </div>
 
@@ -144,6 +155,14 @@ export function Header() {
             >
               <Search className="w-5 h-5" />
             </button>
+
+            <a
+              href={SITE.phoneHref}
+              className="hidden xl:inline-flex items-center gap-2 h-10 px-4 rounded-full border border-white/10 text-sm font-semibold text-foreground/80 hover:text-foreground hover:border-primary/40 transition-all"
+              aria-label={`Ara: ${SITE.phone}`}
+            >
+              <Phone className="w-4 h-4 text-primary-2" /> {SITE.phone}
+            </a>
 
             <a
               href={`https://wa.me/${SITE.whatsappNumber}`}
@@ -321,6 +340,20 @@ export function Header() {
                 className="btn btn-whatsapp w-full h-12"
               >
                 <MessageCircle className="w-5 h-5" /> WhatsApp ile İletişim
+              </a>
+              <div className="grid grid-cols-2 gap-2">
+                <a href={SITE.phoneHref} className="btn btn-glass h-11 text-sm">
+                  <Phone className="w-4 h-4" /> Hemen Ara
+                </a>
+                <a href={SITE.whatsappChannel} target="_blank" rel="noopener" className="btn btn-glass h-11 text-sm">
+                  <WhatsAppIcon className="w-4 h-4 text-whatsapp" /> Kanalımız
+                </a>
+              </div>
+              <a
+                href={SITE.phoneHref}
+                className="block text-center text-sm font-semibold text-foreground hover:text-primary-2 transition-colors pt-1"
+              >
+                {SITE.phone}
               </a>
               <a
                 href={`mailto:${SITE.email}`}

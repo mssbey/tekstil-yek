@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   Factory, Heart, Sparkles, Leaf,
-  ShieldCheck, MessageCircle, ArrowRight, Globe,
+  ShieldCheck, MessageCircle, ArrowRight, Globe, Phone, Megaphone,
 } from "lucide-react";
 import { SITE } from "@/lib/config";
 import { allProducts } from "@/lib/products";
@@ -174,14 +174,22 @@ export default function AboutPage() {
                 Bursa&apos;dan dünyanın her yerine aracısız fiyat, samimi iletişim
                 ve özenle hazırlanmış pijama takımları.
               </p>
-              <a
-                href={`https://wa.me/${SITE.whatsappNumber}`}
-                target="_blank"
-                rel="noopener"
-                className="btn btn-whatsapp h-12 px-8 mt-7 inline-flex"
-              >
-                <MessageCircle className="w-5 h-5" /> WhatsApp ile İletişim
-              </a>
+              <div className="flex flex-wrap justify-center gap-3 mt-7">
+                <a
+                  href={`https://wa.me/${SITE.whatsappNumber}`}
+                  target="_blank"
+                  rel="noopener"
+                  className="btn btn-whatsapp h-12 px-8"
+                >
+                  <MessageCircle className="w-5 h-5" /> WhatsApp ile İletişim
+                </a>
+                <a href={SITE.phoneHref} className="btn btn-glass h-12 px-7">
+                  <Phone className="w-5 h-5" /> {SITE.phone}
+                </a>
+                <a href={SITE.whatsappChannel} target="_blank" rel="noopener" className="btn btn-glass h-12 px-7">
+                  <Megaphone className="w-5 h-5" /> WhatsApp Kanalımız
+                </a>
+              </div>
             </div>
           </div>
         </div>

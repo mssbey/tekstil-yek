@@ -16,6 +16,7 @@ import { CATEGORIES, SITE } from "@/lib/config";
 import { allProducts, getProductsByCategory } from "@/lib/products";
 import { ProductCard } from "@/components/ProductCard";
 import { Reveal } from "@/components/Reveal";
+import { WhatsAppChannel } from "@/components/WhatsAppChannel";
 
 export default function HomePage() {
   const featured = allProducts.slice(0, 8);
@@ -29,9 +30,9 @@ export default function HomePage() {
   }));
 
   return (
-    <>
+    <div className="home-light">
       {/* ═══════════════════════════════════════
-          HERO — full viewport, dark ultra-premium
+          HERO — full viewport, white + orange
           ═══════════════════════════════════════ */}
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-background bg-grid">
         {/* Ambient glows */}
@@ -163,7 +164,7 @@ export default function HomePage() {
 
                 {/* Floating cards */}
                 <div
-                  className="hidden sm:flex absolute -left-8 bottom-16 glass rounded-2xl px-4 py-3 items-center gap-3 floaty"
+                  className="hidden sm:flex absolute -left-8 bottom-16 glass home-float-card rounded-2xl px-4 py-3 items-center gap-3 floaty"
                   style={{ animationDelay: "1.5s" }}
                 >
                   <div className="w-9 h-9 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center">
@@ -176,7 +177,7 @@ export default function HomePage() {
                 </div>
 
                 <div
-                  className="hidden sm:flex absolute -right-6 top-14 glass rounded-2xl px-4 py-3 items-center gap-3 floaty"
+                  className="hidden sm:flex absolute -right-6 top-14 glass home-float-card rounded-2xl px-4 py-3 items-center gap-3 floaty"
                   style={{ animationDelay: "2.5s" }}
                 >
                   <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-xs font-bold text-white">
@@ -197,17 +198,17 @@ export default function HomePage() {
           <div className="marquee text-[11px] font-bold tracking-[.3em] uppercase whitespace-nowrap">
             {Array.from({ length: 2 }).map((_, k) => (
               <div key={k} className="flex items-center gap-14 pr-14">
-                <span className="text-white/20">%100 Yerli Üretim</span>
+                <span className="text-foreground/25">%100 Yerli Üretim</span>
                 <span className="text-primary/50">✦</span>
-                <span className="text-white/20">Premium Kumaş</span>
+                <span className="text-foreground/25">Premium Kumaş</span>
                 <span className="text-primary/50">✦</span>
-                <span className="text-white/20">50+ Yıllık Tecrübe</span>
+                <span className="text-foreground/25">50+ Yıllık Tecrübe</span>
                 <span className="text-primary/50">✦</span>
-                <span className="text-white/20">Dünya Geneli Sevkiyat</span>
+                <span className="text-foreground/25">Dünya Geneli Sevkiyat</span>
                 <span className="text-primary/50">✦</span>
-                <span className="text-white/20">WhatsApp Sipariş</span>
+                <span className="text-foreground/25">WhatsApp Sipariş</span>
                 <span className="text-primary/50">✦</span>
-                <span className="text-white/20">Doğrudan Üreticiden</span>
+                <span className="text-foreground/25">Doğrudan Üreticiden</span>
                 <span className="text-primary/50">✦</span>
               </div>
             ))}
@@ -539,6 +540,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </>
+
+      {/* ═══════════════════════════════════════
+          WHATSAPP CHANNEL
+          ═══════════════════════════════════════ */}
+      <section className="bg-surface section-pad">
+        <div className="container-x">
+          <Reveal>
+            <WhatsAppChannel />
+          </Reveal>
+        </div>
+      </section>
+    </div>
   );
 }

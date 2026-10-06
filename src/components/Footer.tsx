@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { CATEGORIES, SITE } from "@/lib/config";
 
 const SocialIcon = ({ d, label, href }: { d: string; label: string; href: string }) => (
@@ -63,6 +64,22 @@ export function Footer() {
               <SocialIcon href={SITE.social.twitter}   label="Twitter"   d={SOCIAL_PATHS.twitter}   />
               <SocialIcon href={SITE.social.youtube}   label="YouTube"   d={SOCIAL_PATHS.youtube}   />
             </div>
+
+            <a
+              href={SITE.whatsappChannel}
+              target="_blank"
+              rel="noopener"
+              className="group mt-7 flex items-center gap-4 max-w-sm rounded-2xl border border-whatsapp/20 bg-whatsapp/[.06] p-4 hover:border-whatsapp/50 hover:bg-whatsapp/[.1] transition-all"
+            >
+              <span className="w-11 h-11 shrink-0 rounded-full bg-whatsapp text-white flex items-center justify-center shadow-[0_8px_24px_-8px_rgba(37,211,102,.6)]">
+                <WhatsAppIcon className="w-5 h-5" />
+              </span>
+              <span className="flex-1 min-w-0">
+                <span className="block text-sm font-semibold text-white">WhatsApp Kanalımıza Katılın</span>
+                <span className="block text-xs text-white/45 mt-0.5">Yeni modeller ve kampanyalar ilk sizde</span>
+              </span>
+              <ArrowUpRight className="w-4 h-4 text-whatsapp shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
           </div>
 
           {/* Kurumsal */}
@@ -104,7 +121,13 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Phone className="w-4 h-4 mt-0.5 text-primary-2 shrink-0" />
-                <a href={`tel:${SITE.phone}`} className="hover:text-primary-2 transition-colors">{SITE.phone}</a>
+                <a href={SITE.phoneHref} className="hover:text-primary-2 transition-colors">{SITE.phone}</a>
+              </li>
+              <li className="flex gap-3">
+                <WhatsAppIcon className="w-4 h-4 mt-0.5 text-whatsapp shrink-0" />
+                <a href={`https://wa.me/${SITE.whatsappNumber}`} target="_blank" rel="noopener" className="hover:text-whatsapp transition-colors">
+                  WhatsApp Hattı
+                </a>
               </li>
             </ul>
           </div>
